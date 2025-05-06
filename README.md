@@ -12,16 +12,14 @@ This repository contains a comprehensive set of logic-building questions categor
 
 ## Here are some tips for improving your programming logic:
 
--Understand the problem: Read and understand the problem statement.
--Generate Examples: Create additional input and output cases for each problem.
--Draw observations: Draw observations and patterns based on the examples you created.
--Start with Basic: First, think of the basic way to solve the problem then optimize the solution.
+- Understand the problem: Read and understand the problem statement.
+- Generate Examples: Create additional input and output cases for each problem.
+- Draw observations: Draw observations and patterns based on the examples you created.
+- Start with Basic: First, think of the basic way to solve the problem then optimize the solution.
 
 ## 🗂️ Structure
 
 /level-1-beginner/
-Question1.java
-Question2.java
 /level-2-intermediate/
 ...
 /level-3-advanced/
