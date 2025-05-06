@@ -10,6 +10,13 @@ This repository contains a comprehensive set of logic-building questions categor
 - 📂 Organized by difficulty and topic
 - 💡 Ideal for interview prep and coding practice
 
+## Here are some tips for improving your programming logic:
+
+-Understand the problem: Read and understand the problem statement.
+-Generate Examples: Create additional input and output cases for each problem.
+-Draw observations: Draw observations and patterns based on the examples you created.
+-Start with Basic: First, think of the basic way to solve the problem then optimize the solution.
+
 ## 🗂️ Structure
 
 /level-1-beginner/
