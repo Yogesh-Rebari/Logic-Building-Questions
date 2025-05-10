@@ -5,7 +5,7 @@ Example:
 Input: number : 2
 Output: Number is Positive!
 
-Input: number : 7
+Input: number : -7
 Output: Number is Negetive!
  */
 
