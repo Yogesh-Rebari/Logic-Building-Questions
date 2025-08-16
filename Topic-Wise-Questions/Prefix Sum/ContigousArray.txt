@@ -1,0 +1,60 @@
+/* Given a binary array nums, return the maximum length of a contiguous subarray with an equal number of 0 and 1.
+
+Example 1:
+
+Input: nums = [0,1]
+Output: 2
+Explanation: [0, 1] is the longest contiguous subarray with an equal number of 0 and 1.
+Example 2:
+
+Input: nums = [0,1,0]
+Output: 2
+Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1.
+Example 3:
+
+Input: nums = [0,1,1,1,1,1,0,0,0]
+Output: 6
+Explanation: [1,1,1,0,0,0] is the longest contiguous subarray with equal number of 0 and 1. */
+
+\\CODE : 
+\\+------------------------------------------------------------+
+import java.util.*;
+
+class Solution {
+    public int findMaxLength(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, -1); // base case: sum=0 at index -1
+
+        int maxLen = 0, sum = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            // treat 0 as -1
+            sum += (nums[i] == 0) ? -1 : 1;
+
+            if (map.containsKey(sum)) {
+                // seen this sum before → subarray [map.get(sum)+1 .. i]
+                maxLen = Math.max(maxLen, i - map.get(sum));
+            } else {
+                // store first occurrence of this sum
+                map.put(sum, i);
+            }
+        }
+
+        return maxLen;
+    }
+}
+\\+------------------------------------------------------------+
+
+/* Dry Run Example
+
+nums = [0,1,0,1]
+
+i=0 → sum=-1, store (-1→0)
+
+i=1 → sum=0, seen before at -1 → length=2 → maxLen=2
+
+i=2 → sum=-1, seen before at 0 → length=2 → maxLen=2
+
+i=3 → sum=0, seen before at -1 → length=4 → maxLen=4
+
+Answer = 4 */
